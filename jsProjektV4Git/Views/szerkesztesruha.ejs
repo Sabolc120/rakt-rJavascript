@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Egy ruha</title>
+  </head>
+  <body>
+    <section id ="firstImpressionStorage">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">Storage</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="/foods">Ételek</a>
+              <a class="nav-item nav-link" href="/clothes">Ruhák</a>
+              <a class="nav-item nav-link" href="/feltoltes">Termék feltöltés</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <div class="container">
+      <h1 class="etelSzerkeszt">Ruha szerkesztése</h1>
+      <div class="row">
+        <section id="egyTermek">
+          <div class="col-lg-12">
+            <p><%= data.vonalkod %></p>
+            <h1><%= data.fajta %></h1>
+            <p><%= data.leiras %></p>
+            <p><%= data.ar %> Ft</p>
+            <img src="/kepek/<%= data.kepcim %>" alt="kep" class="kep"/>
+            <p class="meret">Ruha mérete: <%= data.meret %></p>
+            <p class="nem">Neme: <%= data.neme %></p>
+            <p class="nem">Mennyiség: <%= data.mennyiseg %></p>
+            <a href="/refreshCloth/<%= data._id %>" class="link">Termék szerkesztése</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
